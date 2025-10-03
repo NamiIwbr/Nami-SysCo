@@ -1,0 +1,280 @@
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+    }
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0a1220;
+    color: white;
+}
+
+header {
+    padding: 20px 5%;
+    border-bottom: 1px solid #fff;
+}
+
+header .logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #34d399;
+}
+
+
+h1 {
+    font-size: 44px;
+    font-weight: bold;
+    margin: 2% 0;
+    animation: fadeInUp 0.8s ease;
+}
+
+.texts{
+    max-width: 60%;
+    justify-self: center;
+    animation: fadeInUp 0.8s ease;
+}
+
+p.subtitle {
+    color: #94a3b8;
+    line-height: 1.4;
+    font-size: 1.2rem;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 80%;
+    margin: 0 auto;
+}
+.hellop{
+    font-size: 15px;
+    margin-top: 1%;
+    margin-left: 10%;
+    color: #9da2af;
+}
+
+.card {
+    background-color: #121827;
+    border: 1px solid #1f2837;
+    border-radius: 18px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease;
+    position: relative;
+    animation: fadeInUp 0.8s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card h2 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.card p {
+    color: #94a3b8;
+    margin: 8% 0 20% 0;
+}
+
+.card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.card ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.checkmark {
+    color: #34d399;
+    display: inline-block;
+    margin-right: 2%;
+}
+
+.btn {
+    margin-top: 20px;
+    padding: 12px;
+    border-radius: 20px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    color: #fff;
+    background-color: #334155;
+    transition: background 0.2s;
+    position: relative;
+    z-index: 1;
+    animation: gradientShift 8s ease infinite;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+     box-shadow: 0 8px 15px rgba(0,255,150,0.3);
+}
+
+
+.badge {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    background: #1b4732;
+    padding: 7px 12px;
+    border-radius: 20px;
+    font-size: 15px;
+    border: 1px solid #00c469;
+    color: #b4f0d3;
+}
+
+.btn-green {
+    background-color: #22c55e;
+}
+
+.btn-green:hover {
+    background-color: #16a34a;
+}
+
+footer {
+    border-top: 1px solid #334155;
+    padding: 20px;
+    text-align: center;
+    color: #94a3b8;
+    font-size: 14px;
+    margin-top: 55px;
+}
+
+@media (max-width: 1125px) {
+    h1 {
+        font-size: 2.5em;
+        margin: 3% 0;
+    }
+
+    .texts {
+        max-width: 70%;
+        margin: 0 auto;
+    }
+
+    p.subtitle {
+        font-size: 1rem;
+    }
+
+    .card {
+        padding: 35px 20px 20px 20px;
+    }
+
+    .card p {
+        margin: 10% 0;
+    }
+
+    .badge {
+        top: 10px;
+        right: 10px;
+        padding: 7px;
+        font-size: 13px;
+    }
+    .cards{
+        margin-top: 5%;
+        max-width: 90%;
+    }
+    .hellop{
+        margin-left: 5%;
+    }
+}
+
+@media (max-width: 825px) {
+    h1 {
+        font-size: 2em;
+        margin: 3% 0;
+    }
+
+    .texts {
+        max-width: 70%;
+        margin: 0 auto;
+    }
+
+    p.subtitle {
+        font-size: 1rem;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+        max-width: 70%;
+        gap: 16px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .card h2 {
+        font-size: 24px;
+    }
+
+    .card p {
+        margin: 5% 0;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 10px;
+    }
+    .hellop{
+        margin-left: 15%;
+    }
+}
+
+
+@media (max-width: 499px) {
+    header {
+        padding: 15px 5%;
+        text-align: center;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .texts, .cards{
+        max-width: 85%;
+    }
+
+    p.subtitle {
+        font-size: 0.8rem;
+    }
+        .card:hover {
+        transform: translateY(-5px);
+        }
+
+    .badge {
+        font-size: 13px;
+        top: 8px;
+        right: 15px;
+        padding: 6px 10px;
+    }
+
+    .hellop {
+        margin-left: 7.5%;
+    }
+
+    footer {
+        font-size: 13px;
+    }
+}
